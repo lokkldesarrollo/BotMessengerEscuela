@@ -2,6 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express().use(bodyParser.json());
+var path = require('path');
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 
 app.post('/webhook', (req, res) => {
     console.log('POST: webhook');

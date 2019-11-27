@@ -13,7 +13,7 @@
     "dependencies": {
         "body-parser": "^1.19.0",
         "ejs": "2.5.6",
-        "express": "4.15.2",
+        "express": "^4.15.2",
         "last-fm": "^5.2.2",
         "path": "^0.12.7"
     },
