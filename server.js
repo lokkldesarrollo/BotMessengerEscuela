@@ -90,7 +90,16 @@ function callSendAPI(sender_psid, response){
          },
          'message' : response 
     };
-
+    
+   request({
+       
+    }, (err,res, body) => {
+        if(!err){
+            console.log('Mensaje enviado de vuelta');
+        }else{
+            console.log('No se pudo enviar');
+        }
+    });
 
     
 }
