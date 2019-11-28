@@ -10,6 +10,9 @@ const path = require('path');
 const PAGE_ACESS_TOKEN = process.env.PAGE_ACESS_TOKEN;
 
 app.get('/', function(req, res) {
+    console.log('__________________________________________________________')
+    console.log(PAGE_ACESS_TOKEN);
+
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
