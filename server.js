@@ -44,6 +44,7 @@ app.post('/webhook', (req, res) => {
 });
 
 app.get('/webhook', (req, res) => {
+    console.log('__________________________________________________________')
     console.log('GET: webhook');
 
     const VERIFY_TOKEN = 'stringUnicoParaTuAplicacion';
