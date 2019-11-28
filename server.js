@@ -91,18 +91,7 @@ function callSendAPI(sender_psid, response){
          'message' : response 
     };
 
-    request({
-        'uri':'https://graph.facebook.com/v2.6/me/messages',
-        'qs':{'access_token': PAGE_ACESS_TOKEN },
-        'method': 'POST'.
-        'json':requestBody
-    }, (err,res, body) => {
-        if(!err){
-            console.log('Mensaje enviado de vuelta');
-        }else{
-            console.log('No se pudo enviar');
-        }
-    });
+
     
 }
 
