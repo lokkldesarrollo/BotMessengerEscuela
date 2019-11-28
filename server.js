@@ -64,7 +64,21 @@ app.get('/webhook', (req, res) => {
     }
 });
 
+function handleMessage(sender_psid, received_message){
+    let response;
 
+    if(received_message.text){
+        response = {
+            'text': 'Tu mensaje fue ${received_message.text}'
+        }
+    }//end if
+
+    callSendAPI(sender_psid, response);
+}
+
+function handlePostback(sender_psid, received_postback){
+    
+}
 
 app.listen(process.env.PORT || 4000, function() {
     console.log('Your node js server is running');
