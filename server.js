@@ -80,6 +80,33 @@ function handlePostback(sender_psid, received_postback){
     
 }
 
+
+
+function callSendAPI(sender_psid, response){
+
+    const requestBody = {
+         'recipient': {
+            'id' : sender_psid
+         },
+         'message' : response 
+    };
+
+    request({
+        'uri':'https://graph.facebook.com/v2.6/me/messages',
+        'qs':{'access_token': PAGE_ACESS_TOKEN },
+        'method': 'POST'.
+        'json':requestBody
+    }, (err,res, body) => {
+        if(!err){
+            console.log('Mensaje enviado de vuelta');
+        }else{
+            console.log('No se pudo enviar');
+        }
+    });
+    
+}
+
+
 app.listen(process.env.PORT || 4000, function() {
     console.log('Your node js server is running');
 });
